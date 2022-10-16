@@ -58,8 +58,8 @@ DESKTOP_AGENT = (
 
 
 # Number of searches to make
-DESKTOP_COUNT = 34
-MOBILE_COUNT = 40
+DESKTOP_COUNT = 30
+MOBILE_COUNT = 20
 
 # Time to allow Chrome to load in seconds
 LOAD_DELAY = 1.5
@@ -304,7 +304,7 @@ def main():
         search(
             count, words_gen, config.get("desktop-agent") or DESKTOP_AGENT, args, config
         )
-        print(f"Desktop Search complete! {5*count} MS rewards points\n")
+        print(f"Desktop Search complete! {3*count} MS rewards points\n")
 
     def mobile():
         # Complete search with mobile settings
@@ -314,7 +314,7 @@ def main():
         search(
             count, words_gen, config.get("mobile-agent") or MOBILE_AGENT, args, config
         )
-        print(f"Mobile Search complete! {5*count} MS rewards points\n")
+        print(f"Mobile Search complete! {3*count} MS rewards points\n")
 
     # If neither mode is specified, complete both modes
     if args.desktop:
